@@ -1,0 +1,16 @@
+A ideia original circula o conceito de transformar o leitor de .xpm em parte da struct principal;
+  - (char *relative_path)
+  - modificar e checar constantemente em tempo de execução.
+Com o mapa armazenado em um array, o leitor agiria juntamente a uma função focada em modificar o endereço apontado pelo ponteiro.
+  - vars->relative_path = "./sprites/example.xpm"
+  - essa função conteria todos os endereços relativos para animações, e faria a checagem baseada no estado atual.
+     - if (atual) / goto next sprite.
+Toda releitura da mapa teria informações diferentes sendo oferecidas para a renderização do cenário, gerando as animações em tempo de execução!
+  - mlx_xpm_to_image(vars->relative_path, vars->xpos, vars->ypos)
+  - ft_check_next_block(maparray[i+1])
+  - then gather positions and render next block
+A variavel ctr, contida no loop principal do programa, pode ser levada para a struct - assim podemos checar o estado/iteraçoes do sistema a qualquer momento
+  - Isso seria especialmente útil para resetar e modificar as sprites, sem depender do loop principal.
+  - Isso também iria reduzir o tamanho do loop principal (na versão de upload para o  git)
+
+
