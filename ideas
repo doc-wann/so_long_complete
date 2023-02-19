@@ -13,4 +13,10 @@ A variavel ctr, contida no loop principal do programa, pode ser levada para a st
   - Isso seria especialmente útil para resetar e modificar as sprites, sem depender do loop principal.
   - Isso também iria reduzir o tamanho do loop principal (na versão de upload para o  git)
 
+// 18/02/23
+
+Separar a criação da janela em uma função separada da main(), e colocar sua única execução dentro da leitura do mapa. Assim o tamaanho da janela será incremental, baseado
+nos dados de entrada do arquivo .ber adicionado com a compilação.
+
+
 
